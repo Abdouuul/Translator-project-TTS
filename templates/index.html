@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Translator App</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='index.css') }}"
+    />
+  </head>
+  <body>
+    <div class="main-page">
+      <div class="container">
+        <h1>Welcome to the Translator App 💬</h1>
+        <p>This is a simple web application to translate text.</p>
+      </div>
+      <div id="transcription-output" class="transcription-output"></div>
+      <div class="audio-record-card">
+        <div>
+          <button id="record-btn" class="record-button">Record 🎙️</button>
+          <button id="stop-btn" class="stop-button" disabled>Stop 🛑</button>
+          <span id="status"></span>
+          <audio id="player" controls></audio>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+  </body>
+</html>
